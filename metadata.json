@@ -1,0 +1,11 @@
+{
+  "name": "Ponte",
+  "description": "Uma plataforma moderna de colaboração estudantil que transforma dificuldades em aprendizado compartilhado, utilizando inteligência artificial para validar conhecimentos e gamificação para engajar estudantes.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
