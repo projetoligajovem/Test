@@ -4,7 +4,7 @@
  */
 
 import { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth, db } from './lib/firebase';
 import { doc, getDoc } from 'firebase/firestore';
@@ -55,7 +55,7 @@ export default function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={user ? <Navigate to="/dashboard" /> : <LandingPage />} />
         <Route path="/auth" element={user ? <Navigate to="/dashboard" /> : <AuthView />} />
@@ -77,6 +77,6 @@ export default function App() {
         
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
